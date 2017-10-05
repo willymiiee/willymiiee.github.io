@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Article Manager</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <main class="col-sm-12 pt-3">
+                <h1>Article Manager</h1>
+
+                <app></app>
+            </main>
+        </div>
+    </div>
+
+    <!-- include components -->
+    <script type="riot/tag" src="components/app.tag"></script>
+    <script type="riot/tag" src="components/list.tag"></script>
+    <script type="riot/tag" src="components/detail.tag"></script>
+    <script type="riot/tag" src="components/input-form.tag"></script>
+    <script type="riot/tag" src="components/edit-form.tag"></script>
+
+    <!-- Riot js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.7.3/riot+compiler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot-route@x.x.x/dist/route.min.js"></script>
+    <script>
+        riot.compile(function() {
+            riot.mount('*')
+            route.start(true)
+        })
+    </script>
+</body>
+</html>
