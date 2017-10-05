@@ -40,7 +40,7 @@
             let params = new URLSearchParams()
             params.append('title', self.title)
             params.append('content', self.content)
-            axios.post('http://api.arman.local/articles', params)
+            axios.post('https://139.59.113.184/public/arman-api/public/articles', params)
             .then(function (response) {
                 route('/')
             })

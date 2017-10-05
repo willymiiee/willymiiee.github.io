@@ -33,7 +33,7 @@
         })
 
         getData(id) {
-            axios.get('http://api.arman.local/articles/'+id)
+            axios.get('https://139.59.113.184/public/arman-api/public/articles/'+id)
             .then(function (response) {
                 self.article = response.data
                 self.update()

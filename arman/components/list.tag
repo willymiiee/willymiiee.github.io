@@ -158,7 +158,7 @@
             self.articles = []
             self.load = true
             self.update()
-            axios.get('http://api.arman.local/articles', {
+            axios.get('https://139.59.113.184/public/arman-api/public/articles', {
                 params: {
                     skip: self.skip,
                     take: self.take,
@@ -180,7 +180,7 @@
         }
 
         delete(e) {
-            axios.post('http://api.arman.local/articles/'+e.target.id+'?_method=DELETE')
+            axios.post('https://139.59.113.184/public/arman-api/public/articles/'+e.target.id+'?_method=DELETE')
             .then(function (response) {
                 self.getData()
             })

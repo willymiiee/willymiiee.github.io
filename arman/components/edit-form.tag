@@ -39,7 +39,7 @@
         }
 
         getData(id) {
-            axios.get('http://api.arman.local/articles/'+id)
+            axios.get('https://139.59.113.184/public/arman-api/public/articles/'+id)
             .then(function (response) {
                 self.title = response.data.title
                 self.content = response.data.content
@@ -55,7 +55,7 @@
             params.append('_method', 'PATCH')
             params.append('title', self.title)
             params.append('content', self.content)
-            axios.post('http://api.arman.local/articles/'+self.id+'?_method=PATCH', params)
+            axios.post('https://139.59.113.184/public/arman-api/public/articles/'+self.id+'?_method=PATCH', params)
             .then(function (response) {
                 route('/')
             })
